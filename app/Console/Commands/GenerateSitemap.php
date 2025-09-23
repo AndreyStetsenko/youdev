@@ -1,29 +1,122 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Console\Commands;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\File;
 use App\Models\Portfolio;
 use App\Models\BlogPost;
 use App\Models\BlogCategory;
+use Carbon\Carbon;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 
-class SitemapController extends Controller
+class GenerateSitemap extends Command
 {
-    public function index()
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = 'sitemap:generate 
+                            {--locales=en,uk : Comma-separated list of locales}
+                            {--output=public : Output directory for sitemap files}
+                            {--force : Force regenerate even if files exist}';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Generate XML sitemaps for the website';
+
+    /**
+     * Execute the console command.
+     */
+    public function handle()
     {
-        return Sitemap::create()
+        $outputDir = $this->option('output');
+        $force = $this->option('force');
+
+        $this->info('🚀 Starting sitemap generation with Spatie...');
+
+        // Ensure output directory exists
+        if (!File::exists($outputDir)) {
+            File::makeDirectory($outputDir, 0755, true);
+            $this->info("📁 Created output directory: {$outputDir}");
+        }
+
+        $generatedFiles = [];
+
+        // Generate main sitemap index
+        $indexPath = "{$outputDir}/sitemap.xml";
+        if ($this->generateSitemapIndex($indexPath, $force)) {
+            $generatedFiles[] = 'sitemap.xml';
+        }
+
+        // Generate main pages sitemap
+        $mainPath = "{$outputDir}/sitemap-main.xml";
+        if ($this->generateMainSitemap($mainPath, $force)) {
+            $generatedFiles[] = 'sitemap-main.xml';
+        }
+
+        // Generate portfolio sitemap
+        $portfolioPath = "{$outputDir}/sitemap-portfolio.xml";
+        if ($this->generatePortfolioSitemap($portfolioPath, $force)) {
+            $generatedFiles[] = 'sitemap-portfolio.xml';
+        }
+
+        // Generate blog sitemap
+        $blogPath = "{$outputDir}/sitemap-blog.xml";
+        if ($this->generateBlogSitemap($blogPath, $force)) {
+            $generatedFiles[] = 'sitemap-blog.xml';
+        }
+
+        // Generate blog categories sitemap
+        $blogCategoriesPath = "{$outputDir}/sitemap-blog-categories.xml";
+        if ($this->generateBlogCategoriesSitemap($blogCategoriesPath, $force)) {
+            $generatedFiles[] = 'sitemap-blog-categories.xml';
+        }
+
+        // Generate robots.txt
+        $this->generateRobotsTxt($outputDir);
+
+        $this->info('✅ Sitemap generation completed!');
+        $this->info('📄 Generated files: ' . implode(', ', $generatedFiles));
+        $this->info("🌐 Main sitemap URL: " . url('/sitemap.xml'));
+    }
+
+    /**
+     * Generate sitemap index
+     */
+    private function generateSitemapIndex(string $path, bool $force): bool
+    {
+        if (File::exists($path) && !$force) {
+            $this->warn("⚠️  File exists: " . basename($path) . " (use --force to overwrite)");
+            return false;
+        }
+
+        $sitemap = Sitemap::create()
             ->add('/sitemap-main.xml')
             ->add('/sitemap-portfolio.xml')
             ->add('/sitemap-blog.xml')
             ->add('/sitemap-blog-categories.xml')
-            ->toResponse(request());
+            ->writeToFile($path);
+
+        $this->info("✅ Generated: " . basename($path));
+        return true;
     }
-    
-    public function main()
+
+    /**
+     * Generate main pages sitemap
+     */
+    private function generateMainSitemap(string $path, bool $force): bool
     {
+        if (File::exists($path) && !$force) {
+            $this->warn("⚠️  File exists: " . basename($path) . " (use --force to overwrite)");
+            return false;
+        }
+
         $locales = ['en', 'uk'];
         
         // Static pages with their priorities and change frequencies
@@ -73,11 +166,21 @@ class SitemapController extends Controller
             }
         }
         
-        return $sitemap->toResponse(request());
+        $sitemap->writeToFile($path);
+        $this->info("✅ Generated: " . basename($path));
+        return true;
     }
-    
-    public function portfolio()
+
+    /**
+     * Generate portfolio sitemap
+     */
+    private function generatePortfolioSitemap(string $path, bool $force): bool
     {
+        if (File::exists($path) && !$force) {
+            $this->warn("⚠️  File exists: " . basename($path) . " (use --force to overwrite)");
+            return false;
+        }
+
         $locales = ['en', 'uk'];
         $portfolios = Portfolio::published()->get();
         
@@ -104,11 +207,21 @@ class SitemapController extends Controller
             }
         }
         
-        return $sitemap->toResponse(request());
+        $sitemap->writeToFile($path);
+        $this->info("✅ Generated: " . basename($path));
+        return true;
     }
-    
-    public function blog()
+
+    /**
+     * Generate blog sitemap
+     */
+    private function generateBlogSitemap(string $path, bool $force): bool
     {
+        if (File::exists($path) && !$force) {
+            $this->warn("⚠️  File exists: " . basename($path) . " (use --force to overwrite)");
+            return false;
+        }
+
         $locales = ['en', 'uk'];
         $blogPosts = BlogPost::published()->get();
         
@@ -135,14 +248,21 @@ class SitemapController extends Controller
             }
         }
         
-        return $sitemap->toResponse(request());
+        $sitemap->writeToFile($path);
+        $this->info("✅ Generated: " . basename($path));
+        return true;
     }
 
     /**
      * Generate blog categories sitemap
      */
-    public function blogCategories()
+    private function generateBlogCategoriesSitemap(string $path, bool $force): bool
     {
+        if (File::exists($path) && !$force) {
+            $this->warn("⚠️  File exists: " . basename($path) . " (use --force to overwrite)");
+            return false;
+        }
+
         $locales = ['en', 'uk'];
         $categories = BlogCategory::where('is_active', true)->get();
         
@@ -169,6 +289,24 @@ class SitemapController extends Controller
             }
         }
         
-        return $sitemap->toResponse(request());
+        $sitemap->writeToFile($path);
+        $this->info("✅ Generated: " . basename($path));
+        return true;
+    }
+
+    /**
+     * Generate robots.txt file
+     */
+    private function generateRobotsTxt(string $outputDir): void
+    {
+        $robotsContent = "User-agent: *\n";
+        $robotsContent .= "Allow: /\n\n";
+        $robotsContent .= "Sitemap: " . url('/sitemap.xml') . "\n";
+        
+        $robotsPath = "{$outputDir}/robots.txt";
+        
+        if (File::put($robotsPath, $robotsContent)) {
+            $this->info("📄 Generated robots.txt");
+        }
     }
 }

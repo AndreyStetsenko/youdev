@@ -22,3 +22,8 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/public/sitemap.xml
+/public/sitemap-main.xml
+/public/sitemap-portfolio.xml
+/public/sitemap-blog.xml
+/public/sitemap-blog-categories.xml

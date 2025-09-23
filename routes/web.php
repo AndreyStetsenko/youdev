@@ -86,3 +86,4 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.i
 Route::get('/sitemap-main.xml', [SitemapController::class, 'main'])->name('sitemap.main');
 Route::get('/sitemap-portfolio.xml', [SitemapController::class, 'portfolio'])->name('sitemap.portfolio');
 Route::get('/sitemap-blog.xml', [SitemapController::class, 'blog'])->name('sitemap.blog');
+Route::get('/sitemap-blog-categories.xml', [SitemapController::class, 'blogCategories'])->name('sitemap.blog-categories');
