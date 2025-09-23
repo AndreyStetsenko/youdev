@@ -94,15 +94,6 @@
                     </a>
                 </div>
             </form>
-
-            {{-- Demo credentials --}}
-            <div class="mt-8 p-4 bg-blue-50 rounded-lg">
-                <h4 class="text-sm font-medium text-blue-900 mb-2">Demo Credentials:</h4>
-                <p class="text-sm text-blue-700">
-                    Email: <code class="bg-blue-100 px-1 rounded">admin@devstudio.com</code><br>
-                    Password: <code class="bg-blue-100 px-1 rounded">password123</code>
-                </p>
-            </div>
         </div>
     </div>
 </body>
