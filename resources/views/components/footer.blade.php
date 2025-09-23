@@ -10,7 +10,7 @@
                 <p class="text-trust-200 mb-4">
                     {{ __('app.footer_description') }}
                 </p>
-                <div class="flex space-x-4">
+                {{-- <div class="flex space-x-4">
                     <a href="#" class="text-trust-300 hover:text-white transition-colors group">
                         <div class="p-2 rounded-lg bg-trust-800/30 group-hover:bg-trust-600/50 transition-colors">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@
                             </svg>
                         </div>
                     </a>
-                </div>
+                </div> --}}
             </div>
 
             {{-- Quick Links --}}
