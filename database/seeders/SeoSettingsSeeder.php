@@ -112,7 +112,7 @@ class SeoSettingsSeeder extends Seeder
                     'uk' => ['політика конфіденційності', 'захист даних', 'персональна інформація', 'конфіденційність'],
                     'en' => ['privacy policy', 'data protection', 'personal information', 'privacy']
                 ],
-                'og_image' => 'images/og-default.jpg'
+                'og_image' => 'images/og-default.png'
             ],
             [
                 'page' => 'terms-of-service',
@@ -128,7 +128,7 @@ class SeoSettingsSeeder extends Seeder
                     'uk' => ['умови використання', 'правила', 'послуги', 'веб-розробка', 'дизайн'],
                     'en' => ['terms of service', 'rules', 'services', 'web development', 'design']
                 ],
-                'og_image' => 'images/og-default.jpg'
+                'og_image' => 'images/og-default.png'
             ]
         ];
 

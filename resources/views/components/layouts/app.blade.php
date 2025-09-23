@@ -15,7 +15,7 @@
     @endphp
     
     <title>{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}</title>
-    <meta name="description" content="{{ $seoSettings?->getLocalizedDescription() ?? '' }}">
+    <meta name="description" content="{{ $seoSettings?->getLocalizedDescription() ?? 'Professional web development, UI/UX design and digital marketing services' }}">
     <meta name="keywords" content="{{ implode(', ', $seoSettings?->getLocalizedKeywords() ?? []) }}">
     <meta name="author" content="{{ $seoSettings?->custom_meta['author'] ?? 'YDev Team' }}">
     <meta name="robots" content="{{ $seoSettings?->custom_meta['robots'] ?? 'index, follow' }}">
@@ -32,8 +32,8 @@
     
     {{-- Open Graph Meta Tags --}}
     <meta property="og:title" content="{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}">
-    <meta property="og:description" content="{{ $seoSettings?->getLocalizedDescription() ?? '' }}">
-    <meta property="og:image" content="{{ $seoSettings?->og_image ? asset('storage/' . $seoSettings->og_image) : asset('images/og-default.jpg') }}">
+    <meta property="og:description" content="{{ $seoSettings?->getLocalizedDescription() ?? 'Professional web development, UI/UX design and digital marketing services' }}">
+    <meta property="og:image" content="{{ $seoSettings?->og_image ? asset('storage/' . $seoSettings->og_image) : asset('images/og-default.png') }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}">
@@ -47,8 +47,8 @@
     <meta name="twitter:site" content="@ydev_team">
     <meta name="twitter:creator" content="@ydev_team">
     <meta name="twitter:title" content="{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}">
-    <meta name="twitter:description" content="{{ $seoSettings?->getLocalizedDescription() ?? '' }}">
-    <meta name="twitter:image" content="{{ $seoSettings?->og_image ? asset('storage/' . $seoSettings->og_image) : asset('images/og-default.jpg') }}">
+    <meta name="twitter:description" content="{{ $seoSettings?->getLocalizedDescription() ?? 'Professional web development, UI/UX design and digital marketing services' }}">
+    <meta name="twitter:image" content="{{ $seoSettings?->og_image ? asset('storage/' . $seoSettings->og_image) : asset('images/og-default.png') }}">
     <meta name="twitter:image:alt" content="{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}">
     
     {{-- Additional SEO Meta Tags --}}

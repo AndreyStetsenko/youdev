@@ -7,7 +7,7 @@
         'name' => $portfolio->getLocalizedTitle(),
         'description' => $portfolio->getLocalizedDescription(),
         'url' => route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $portfolio->slug]),
-        'image' => $portfolio->image ? asset('storage/' . $portfolio->image) : asset('images/og-default.jpg'),
+        'image' => $portfolio->image ? asset('storage/' . $portfolio->image) : asset('images/og-default.png'),
         'author' => [
             '@type' => 'Organization',
             'name' => 'YDev'
