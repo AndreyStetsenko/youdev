@@ -1,0 +1,55 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ydev.com.ua/sitemap.xml
+Sitemap: https://ydev.com.ua/sitemap-main.xml
+Sitemap: https://ydev.com.ua/sitemap-portfolio.xml
+Sitemap: https://ydev.com.ua/sitemap-blog.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /password/
+Disallow: /email/verify
+
+# Allow important directories
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /build/
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: FacebookExternalHit
+Allow: /
+Crawl-delay: 1
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

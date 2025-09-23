@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    /* Enhanced Blue Palette for Trust */
+    --color-trust-50: oklch(.973 .013 250.75);
+    --color-trust-100: oklch(.945 .032 251.15);
+    --color-trust-200: oklch(.898 .062 251.75);
+    --color-trust-300: oklch(.828 .114 252.45);
+    --color-trust-400: oklch(.728 .191 253.25);
+    --color-trust-500: oklch(.628 .237 254.15);
+    --color-trust-600: oklch(.548 .245 254.85);
+    --color-trust-700: oklch(.468 .213 255.45);
+    --color-trust-800: oklch(.398 .177 255.95);
+    --color-trust-900: oklch(.338 .141 256.35);
+    --color-trust-950: oklch(.228 .092 256.75);
+    
+    /* Professional Navy */
+    --color-navy-50: oklch(.968 .008 258.25);
+    --color-navy-100: oklch(.928 .018 258.65);
+    --color-navy-200: oklch(.878 .038 259.15);
+    --color-navy-300: oklch(.808 .068 259.75);
+    --color-navy-400: oklch(.718 .108 260.45);
+    --color-navy-500: oklch(.628 .148 261.25);
+    --color-navy-600: oklch(.548 .178 261.95);
+    --color-navy-700: oklch(.468 .198 262.55);
+    --color-navy-800: oklch(.398 .208 263.05);
+    --color-navy-900: oklch(.338 .218 263.45);
+    --color-navy-950: oklch(.228 .228 263.75);
+}
+
+/* Custom responsive utilities */
+@layer utilities {
+    .text-responsive-lg {
+        @apply text-2xl;
+    }
+    
+    .text-responsive-xl {
+        @apply text-3xl;
+    }
+    
+    @media (min-width: 768px) {
+        .text-responsive-lg {
+            @apply text-3xl;
+        }
+        
+        .text-responsive-xl {
+            @apply text-4xl;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .text-responsive-lg {
+            @apply text-4xl;
+        }
+        
+        .text-responsive-xl {
+            @apply text-5xl;
+        }
+    }
+    
+    /* Improved mobile spacing */
+    .mobile-spacing {
+        @apply px-4 py-8;
+    }
+    
+    @media (min-width: 640px) {
+        .mobile-spacing {
+            @apply px-6 py-12;
+        }
+    }
+    
+    @media (min-width: 1024px) {
+        .mobile-spacing {
+            @apply px-8 py-16;
+        }
+    }
+}
