@@ -17,7 +17,7 @@
     <title>{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}</title>
     <meta name="description" content="{{ $seoSettings?->getLocalizedDescription() ?? 'Professional web development, UI/UX design and digital marketing services' }}">
     <meta name="keywords" content="{{ implode(', ', $seoSettings?->getLocalizedKeywords() ?? []) }}">
-    <meta name="author" content="{{ $seoSettings?->custom_meta['author'] ?? 'YDev Team' }}">
+    <meta name="author" content="{{ $seoSettings?->custom_meta['author'] ?? 'YouDev Team' }}">
     <meta name="robots" content="{{ $seoSettings?->custom_meta['robots'] ?? 'index, follow' }}">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow">
@@ -39,13 +39,13 @@
     <meta property="og:image:alt" content="{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}">
     <meta property="og:url" content="{{ $currentUrl }}">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="YDev">
+    <meta property="og:site_name" content="YouDev">
     <meta property="og:locale" content="{{ app()->getLocale() === 'uk' ? 'uk_UA' : 'en_US' }}">
     
     {{-- Twitter Meta Tags --}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ydev_team">
-    <meta name="twitter:creator" content="@ydev_team">
+    <meta name="twitter:site" content="@YouDev_team">
+    <meta name="twitter:creator" content="@YouDev_team">
     <meta name="twitter:title" content="{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}">
     <meta name="twitter:description" content="{{ $seoSettings?->getLocalizedDescription() ?? 'Professional web development, UI/UX design and digital marketing services' }}">
     <meta name="twitter:image" content="{{ $seoSettings?->og_image ? asset('storage/' . $seoSettings->og_image) : asset('images/og-default.png') }}">
@@ -72,7 +72,7 @@
     {!! json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'Organization',
-        'name' => 'YDev',
+        'name' => 'YouDev',
         'url' => url('/'),
         'logo' => asset('images/logo.svg'),
         'description' => $seoSettings?->getLocalizedDescription() ?? 'Professional web development, UI/UX design and digital marketing services',
@@ -87,9 +87,9 @@
             'availableLanguage' => ['Ukrainian', 'English']
         ],
         'sameAs' => [
-            'https://www.linkedin.com/company/ydev',
-            'https://github.com/ydev-team',
-            'https://twitter.com/ydev_team'
+            'https://www.linkedin.com/company/YouDev',
+            'https://github.com/YouDev-team',
+            'https://twitter.com/YouDev_team'
         ],
         'foundingDate' => '2020',
         'numberOfEmployees' => '5-10',
@@ -133,7 +133,7 @@
     {!! json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'WebSite',
-        'name' => 'YDev',
+        'name' => 'YouDev',
         'url' => url('/'),
         'potentialAction' => [
             '@type' => 'SearchAction',

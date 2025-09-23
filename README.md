@@ -42,7 +42,7 @@ Modern, multilingual landing page for a software development company built with 
 1. **Clone the repository**
 ```bash
 git clone <repository-url>
-cd ydev
+cd YouDev
 ```
 
 2. **Install PHP dependencies**

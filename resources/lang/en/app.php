@@ -278,7 +278,7 @@ return [
     'terms_section_1_content' => 'By using our website or services, you agree to be bound by these terms of service. If you do not agree to any part of these terms, do not use our services.',
     
     'terms_section_2_title' => '2. Service Description',
-    'terms_section_2_content' => 'YDev provides the following services:',
+    'terms_section_2_content' => 'YouDev provides the following services:',
     'terms_service_1' => 'Web development and design',
     'terms_service_2' => 'UI/UX design',
     'terms_service_3' => 'E-commerce development',

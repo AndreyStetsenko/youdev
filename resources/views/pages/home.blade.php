@@ -24,7 +24,7 @@
         'description' => __('app.hero_description'),
         'provider' => [
             '@type' => 'Organization',
-            'name' => 'YDev'
+            'name' => 'YouDev'
         ],
         'areaServed' => 'Worldwide',
         'hasOfferCatalog' => [

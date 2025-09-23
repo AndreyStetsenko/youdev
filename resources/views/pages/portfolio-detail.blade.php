@@ -10,7 +10,7 @@
         'image' => $portfolio->image ? asset('storage/' . $portfolio->image) : asset('images/og-default.png'),
         'author' => [
             '@type' => 'Organization',
-            'name' => 'YDev'
+            'name' => 'YouDev'
         ],
         'dateCreated' => $portfolio->created_at->toW3cString(),
         'dateModified' => $portfolio->updated_at->toW3cString(),

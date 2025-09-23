@@ -136,16 +136,16 @@
             "time": "2024-02-09T16:56:22+00:00"
         },
         {
-            "name": "dflydev/dot-access-data",
+            "name": "dflYouDev/dot-access-data",
             "version": "v3.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dflydev/dflydev-dot-access-data.git",
+                "url": "https://github.com/dflYouDev/dflYouDev-dot-access-data.git",
                 "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/a23a2bf4f31d3518f3ecb38660c95715dfead60f",
+                "url": "https://api.github.com/repos/dflYouDev/dflYouDev-dot-access-data/zipball/a23a2bf4f31d3518f3ecb38660c95715dfead60f",
                 "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f",
                 "shasum": ""
             },
@@ -167,7 +167,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Dflydev\\DotAccessData\\": "src/"
+                    "DflYouDev\\DotAccessData\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -177,12 +177,12 @@
             "authors": [
                 {
                     "name": "Dragonfly Development Inc.",
-                    "email": "info@dflydev.com",
-                    "homepage": "http://dflydev.com"
+                    "email": "info@dflYouDev.com",
+                    "homepage": "http://dflYouDev.com"
                 },
                 {
                     "name": "Beau Simensen",
-                    "email": "beau@dflydev.com",
+                    "email": "beau@dflYouDev.com",
                     "homepage": "http://beausimensen.com"
                 },
                 {
@@ -197,7 +197,7 @@
                 }
             ],
             "description": "Given a deep data structure, access data by dot notation.",
-            "homepage": "https://github.com/dflydev/dflydev-dot-access-data",
+            "homepage": "https://github.com/dflYouDev/dflYouDev-dot-access-data",
             "keywords": [
                 "access",
                 "data",
@@ -205,8 +205,8 @@
                 "notation"
             ],
             "support": {
-                "issues": "https://github.com/dflydev/dflydev-dot-access-data/issues",
-                "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
+                "issues": "https://github.com/dflYouDev/dflYouDev-dot-access-data/issues",
+                "source": "https://github.com/dflYouDev/dflYouDev-dot-access-data/tree/v3.0.3"
             },
             "time": "2024-07-08T12:26:09+00:00"
         },
@@ -1581,7 +1581,7 @@
                 "shasum": ""
             },
             "require": {
-                "dflydev/dot-access-data": "^3.0.1",
+                "dflYouDev/dot-access-data": "^3.0.1",
                 "nette/schema": "^1.2",
                 "php": "^7.4 || ^8.0"
             },

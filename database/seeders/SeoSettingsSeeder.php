@@ -28,7 +28,7 @@ class SeoSettingsSeeder extends Seeder
                 'custom_meta' => [
                     'canonical' => '/',
                     'robots' => 'index, follow',
-                    'author' => 'YDev Team',
+                    'author' => 'YouDev Team',
                     'geo.region' => 'UA',
                     'geo.country' => 'Ukraine',
                     'language' => 'uk, en'
@@ -37,8 +37,8 @@ class SeoSettingsSeeder extends Seeder
             [
                 'page' => 'about',
                 'title' => [
-                    'uk' => 'Про нас | Команда веб-розробників та дизайнерів | YDev',
-                    'en' => 'About Us | Web Development & Design Team | YDev'
+                    'uk' => 'Про нас | Команда веб-розробників та дизайнерів | YouDev',
+                    'en' => 'About Us | Web Development & Design Team | YouDev'
                 ],
                 'description' => [
                     'uk' => 'Дізнайтеся про нашу команду досвідчених веб-розробників та дизайнерів. Ми спеціалізуємося на створенні сучасних веб-сайтів, UI/UX дизайні та цифровому маркетингу.',
@@ -53,8 +53,8 @@ class SeoSettingsSeeder extends Seeder
             [
                 'page' => 'services',
                 'title' => [
-                    'uk' => 'Послуги веб-розробки | Сайти, інтернет-магазини, CRM | YDev',
-                    'en' => 'Web Development Services | Websites, E-commerce, CRM | YDev'
+                    'uk' => 'Послуги веб-розробки | Сайти, інтернет-магазини, CRM | YouDev',
+                    'en' => 'Web Development Services | Websites, E-commerce, CRM | YouDev'
                 ],
                 'description' => [
                     'uk' => 'Повний спектр послуг веб-розробки: корпоративні сайти, інтернет-магазини, CRM системи, UI/UX дизайн, каталоги товарів. Професійна розробка під ключ.',
@@ -69,8 +69,8 @@ class SeoSettingsSeeder extends Seeder
             [
                 'page' => 'portfolio',
                 'title' => [
-                    'uk' => 'Портфоліо | Наші роботи веб-розробки та дизайну | YDev',
-                    'en' => 'Portfolio | Our Web Development & Design Works | YDev'
+                    'uk' => 'Портфоліо | Наші роботи веб-розробки та дизайну | YouDev',
+                    'en' => 'Portfolio | Our Web Development & Design Works | YouDev'
                 ],
                 'description' => [
                     'uk' => 'Переглядайте наші найкращі роботи: веб-сайти, інтернет-магазини, мобільні додатки. Портфоліо досвідченої команди веб-розробників та дизайнерів.',
@@ -85,8 +85,8 @@ class SeoSettingsSeeder extends Seeder
             [
                 'page' => 'contact',
                 'title' => [
-                    'uk' => 'Контакти | Замовити розробку сайту | YDev',
-                    'en' => 'Contact | Order Website Development | YDev'
+                    'uk' => 'Контакти | Замовити розробку сайту | YouDev',
+                    'en' => 'Contact | Order Website Development | YouDev'
                 ],
                 'description' => [
                     'uk' => 'Зв\'яжіться з нами для замовлення веб-розробки. Консультація безкоштовно. Швидкий відгук та професійний підхід до кожного проекту.',
@@ -101,12 +101,12 @@ class SeoSettingsSeeder extends Seeder
             [
                 'page' => 'privacy-policy',
                 'title' => [
-                    'uk' => 'Політика конфіденційності - YDev',
-                    'en' => 'Privacy Policy - YDev'
+                    'uk' => 'Політика конфіденційності - YouDev',
+                    'en' => 'Privacy Policy - YouDev'
                 ],
                 'description' => [
-                    'uk' => 'Політика конфіденційності YDev. Як ми збираємо, використовуємо та захищаємо вашу персональну інформацію.',
-                    'en' => 'YDev Privacy Policy. How we collect, use and protect your personal information.'
+                    'uk' => 'Політика конфіденційності YouDev. Як ми збираємо, використовуємо та захищаємо вашу персональну інформацію.',
+                    'en' => 'YouDev Privacy Policy. How we collect, use and protect your personal information.'
                 ],
                 'keywords' => [
                     'uk' => ['політика конфіденційності', 'захист даних', 'персональна інформація', 'конфіденційність'],
@@ -117,12 +117,12 @@ class SeoSettingsSeeder extends Seeder
             [
                 'page' => 'terms-of-service',
                 'title' => [
-                    'uk' => 'Умови використання - YDev',
-                    'en' => 'Terms of Service - YDev'
+                    'uk' => 'Умови використання - YouDev',
+                    'en' => 'Terms of Service - YouDev'
                 ],
                 'description' => [
-                    'uk' => 'Умови використання послуг YDev. Правила та умови надання веб-розробки, дизайну та маркетингу.',
-                    'en' => 'YDev Terms of Service. Rules and conditions for web development, design and marketing services.'
+                    'uk' => 'Умови використання послуг YouDev. Правила та умови надання веб-розробки, дизайну та маркетингу.',
+                    'en' => 'YouDev Terms of Service. Rules and conditions for web development, design and marketing services.'
                 ],
                 'keywords' => [
                     'uk' => ['умови використання', 'правила', 'послуги', 'веб-розробка', 'дизайн'],

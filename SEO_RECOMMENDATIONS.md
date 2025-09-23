@@ -169,9 +169,9 @@
 ## 📞 Контакты для SEO поддержки
 
 Для получения дополнительной поддержки по SEO оптимизации:
-- Email: seo@ydev.com.ua
-- Telegram: @ydev_seo
-- Скайп: ydev.seo.support
+- Email: seo@YouDev.com.ua
+- Telegram: @YouDev_seo
+- Скайп: YouDev.seo.support
 
 ---
 
