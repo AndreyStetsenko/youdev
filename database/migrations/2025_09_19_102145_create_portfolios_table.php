@@ -20,7 +20,7 @@ return new class extends Migration
             $table->json('gallery')->nullable(); // Additional images
             $table->string('url')->nullable(); // Project URL
             $table->string('github_url')->nullable(); // GitHub repository
-            $table->enum('category', ['web', 'mobile', 'desktop', 'api', 'other']);
+            $table->enum('category', ['web','website','ecommerce','design','marketing','other']);
             $table->enum('status', ['completed', 'in_progress', 'draft']);
             $table->integer('order')->default(0); // For sorting
             $table->boolean('is_featured')->default(false);
