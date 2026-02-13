@@ -119,7 +119,10 @@ return [
     'catalog_desc' => 'Інтерактивні каталоги товарів та послуг',
     'business_card' => 'Візитка',
     'business_card_desc' => 'Мінімалістичні сайти-візитки для презентації бізнесу',
-    
+    'mobile_development' => 'Мобільна розробка',
+    'mobile_development_desc' => 'Нативні та крос-платформні додатки для iOS та Android: від MVP до публікації в сторах.',
+    'mobile_development_tech' => 'iOS, Android, Flutter',
+
     // Service Features
     'shopping_cart_feature' => 'Корзина та оформлення замовлення',
     'payment_systems_feature' => 'Платіжні системи',
@@ -139,7 +142,10 @@ return [
     'simple_design_feature' => 'Простий дизайн',
     'fast_loading_feature' => 'Швидке завантаження',
     'contact_information_feature' => 'Контактна інформація',
-    
+    'native_apps_feature' => 'Нативні iOS та Android',
+    'cross_platform_feature' => 'Крос-платформні (Flutter)',
+    'app_store_feature' => 'Публікація в App Store та Google Play',
+
     // Features
     'shopping_cart' => 'Корзина та оформлення замовлення',
     'payment_systems' => 'Платіжні системи',
@@ -272,6 +278,7 @@ return [
     'web_development_tech' => 'Laravel, React, Vue.js',
     'ui_ux_design_tech' => 'Figma, Adobe XD, Sketch',
     'digital_marketing_tech' => 'SEO, Google Ads, SMM',
+    'mobile_development_tech' => 'iOS, Android, Flutter',
     
     // Terms of Service
     'terms_subtitle' => 'Умови використання наших послуг та веб-сайту',

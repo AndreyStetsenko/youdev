@@ -119,7 +119,10 @@ return [
     'catalog_desc' => 'Interactive catalogs of products and services',
     'business_card' => 'Business Card',
     'business_card_desc' => 'Minimalist business card websites for business presentation',
-    
+    'mobile_development' => 'Mobile Development',
+    'mobile_development_desc' => 'Native and cross-platform apps for iOS and Android: from MVP to publication in stores.',
+    'mobile_development_tech' => 'iOS, Android, Flutter',
+
     // Service Features
     'shopping_cart_feature' => 'Shopping cart & checkout',
     'payment_systems_feature' => 'Payment systems',
@@ -139,7 +142,10 @@ return [
     'simple_design_feature' => 'Simple design',
     'fast_loading_feature' => 'Fast loading',
     'contact_information_feature' => 'Contact information',
-    
+    'native_apps_feature' => 'Native iOS & Android',
+    'cross_platform_feature' => 'Cross-platform (Flutter)',
+    'app_store_feature' => 'Publication in App Store & Google Play',
+
     // Features
     'shopping_cart' => 'Shopping cart & checkout',
     'payment_systems' => 'Payment systems',
@@ -272,6 +278,7 @@ return [
     'web_development_tech' => 'Laravel, React, Vue.js',
     'ui_ux_design_tech' => 'Figma, Adobe XD, Sketch',
     'digital_marketing_tech' => 'SEO, Google Ads, SMM',
+    'mobile_development_tech' => 'iOS, Android, Flutter',
     
     // Terms of Service
     'terms_subtitle' => 'Terms of use for our services and website',

@@ -131,7 +131,6 @@
                         <div>
                             <h4 class="font-semibold text-gray-900 mb-2">Cross-platform</h4>
                             <ul class="text-sm text-gray-600 space-y-1">
-                                <li>• React Native</li>
                                 <li>• Flutter</li>
                                 <li>• Xamarin</li>
                                 <li>• Ionic</li>

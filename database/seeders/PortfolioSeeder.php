@@ -38,7 +38,7 @@ class PortfolioSeeder extends Seeder
                     'en' => 'Secure mobile banking application with biometric authentication, real-time transactions, and budget management features.',
                     'uk' => 'Безпечний мобільний банківський додаток з біометричною аутентифікацією, транзакціями в реальному часі та функціями управління бюджетом.'
                 ],
-                'technologies' => ['React Native', 'Node.js', 'MongoDB', 'JWT', 'Plaid API'],
+                'technologies' => ['Flutter', 'Node.js', 'MongoDB', 'JWT', 'Plaid API'],
                 'category' => 'mobile',
                 'status' => 'completed',
                 'is_featured' => true,

@@ -140,7 +140,43 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                {{-- Mobile Development --}}
+                <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ __('app.mobile_development') }}</h3>
+                    <p class="text-gray-600 mb-6">{{ __('app.mobile_development_desc') }}</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-indigo-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('app.native_apps_feature') }}</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-indigo-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('app.cross_platform_feature') }}</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-indigo-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span class="text-gray-700">{{ __('app.app_store_feature') }}</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white text-indigo-700 text-sm rounded-full font-medium">iOS</span>
+                        <span class="px-3 py-1 bg-white text-indigo-700 text-sm rounded-full font-medium">Android</span>
+                        <span class="px-3 py-1 bg-white text-indigo-700 text-sm rounded-full font-medium">Flutter</span>
+                    </div>
+                </div>
+
                 {{-- Digital Marketing --}}
                 <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
                     <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-6">
