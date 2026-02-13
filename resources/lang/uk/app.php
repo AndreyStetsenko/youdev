@@ -7,6 +7,7 @@ return [
     'portfolio' => 'Портфоліо',
     'services' => 'Послуги',
     'contact' => 'Контакти',
+    'blog' => 'Блог',
     'admin' => 'Адмін',
 
     // Hero Section

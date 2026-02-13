@@ -36,6 +36,14 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'en|uk'], 'middlew
     Route::get('/capabilities/data-analytics', [HomeController::class, 'dataAnalytics'])->name('capabilities.data-analytics');
     Route::get('/capabilities/cloud-services', [HomeController::class, 'cloudServices'])->name('capabilities.cloud-services');
     Route::get('/capabilities/custom-development', [HomeController::class, 'customDevelopment'])->name('capabilities.custom-development');
+
+    // Legal pages
+    Route::get('/privacy-policy', function () {
+        return view('pages.privacy-policy');
+    })->name('privacy-policy');
+    Route::get('/terms-of-service', function () {
+        return view('pages.terms-of-service');
+    })->name('terms-of-service');
 });
 
 // Portfolio detail route (separate to avoid conflicts)
@@ -72,14 +80,9 @@ Route::middleware('guest')->group(function () {
 
 Route::post('/admin/logout', [DashboardController::class, 'logout'])->name('logout')->middleware('auth');
 
-// Legal pages
-Route::get('/privacy-policy', function () {
-    return view('pages.privacy-policy');
-})->name('privacy-policy');
-
-Route::get('/terms-of-service', function () {
-    return view('pages.terms-of-service');
-})->name('terms-of-service');
+// Redirect old legal URLs to default locale
+Route::get('/privacy-policy', fn () => redirect('/en/privacy-policy'));
+Route::get('/terms-of-service', fn () => redirect('/en/terms-of-service'));
 
 // Sitemap routes
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');

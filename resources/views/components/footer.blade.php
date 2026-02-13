@@ -112,8 +112,8 @@
                 © {{ date('Y') }} YouDev. All rights reserved.
             </p>
             <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="{{ route('privacy-policy') }}" class="text-trust-300 hover:text-white text-sm transition-colors">{{ __('app.privacy_policy') }}</a>
-                <a href="{{ route('terms-of-service') }}" class="text-trust-300 hover:text-white text-sm transition-colors">{{ __('app.terms_of_service') }}</a>
+                <a href="{{ route('privacy-policy', ['locale' => app()->getLocale()]) }}" class="text-trust-300 hover:text-white text-sm transition-colors">{{ __('app.privacy_policy') }}</a>
+                <a href="{{ route('terms-of-service', ['locale' => app()->getLocale()]) }}" class="text-trust-300 hover:text-white text-sm transition-colors">{{ __('app.terms_of_service') }}</a>
             </div>
         </div>
     </div>

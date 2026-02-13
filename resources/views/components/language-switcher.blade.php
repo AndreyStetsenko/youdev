@@ -25,21 +25,24 @@
              class="absolute bottom-full right-0 mb-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[120px]">
             
             @php
-                $currentRoute = request()->route()->getName();
-                $routeParams = request()->route()->parameters();
-                // Remove locale from parameters
+                $currentRoute = request()->route()?->getName();
+                $routeParams = request()->route()?->parameters() ?? [];
                 unset($routeParams['locale']);
+                $paramsEn = array_merge($routeParams, ['locale' => 'en']);
+                $paramsUk = array_merge($routeParams, ['locale' => 'uk']);
+                $urlEn = $currentRoute ? route($currentRoute, $paramsEn) : url('/en');
+                $urlUk = $currentRoute ? route($currentRoute, $paramsUk) : url('/uk');
             @endphp
-            
+
             {{-- English --}}
-            <a href="{{ route($currentRoute, array_merge(['locale' => 'en'], $routeParams)) }}" 
+            <a href="{{ $urlEn }}"
                class="flex items-center px-4 py-2 text-sm hover:bg-gray-50 {{ app()->getLocale() === 'en' ? 'text-blue-600 font-medium' : 'text-gray-700' }}">
                 <span class="mr-3">🇺🇸</span>
                 English
             </a>
-            
+
             {{-- Ukrainian --}}
-            <a href="{{ route($currentRoute, array_merge(['locale' => 'uk'], $routeParams)) }}" 
+            <a href="{{ $urlUk }}"
                class="flex items-center px-4 py-2 text-sm hover:bg-gray-50 {{ app()->getLocale() === 'uk' ? 'text-blue-600 font-medium' : 'text-gray-700' }}">
                 <span class="mr-3">🇺🇦</span>
                 Українська

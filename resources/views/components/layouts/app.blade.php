@@ -26,9 +26,15 @@
     <link rel="canonical" href="{{ $canonicalUrl }}">
     
     {{-- Alternate Language Versions --}}
-    <link rel="alternate" hreflang="uk" href="{{ str_replace('/en', '', $currentUrl) }}">
-    <link rel="alternate" hreflang="en" href="{{ str_replace('/uk', '/en', $currentUrl) }}">
-    <link rel="alternate" hreflang="x-default" href="{{ str_replace('/en', '', $currentUrl) }}">
+    @php
+        $routeName = request()->route()?->getName();
+        $routeParams = request()->route()?->parameters() ?? [];
+    @endphp
+    @if($routeName && isset($routeParams['locale']))
+        <link rel="alternate" hreflang="en" href="{{ route($routeName, array_merge($routeParams, ['locale' => 'en'])) }}">
+        <link rel="alternate" hreflang="uk" href="{{ route($routeName, array_merge($routeParams, ['locale' => 'uk'])) }}">
+        <link rel="alternate" hreflang="x-default" href="{{ route($routeName, array_merge($routeParams, ['locale' => 'en'])) }}">
+    @endif
     
     {{-- Open Graph Meta Tags --}}
     <meta property="og:title" content="{{ $seoSettings?->getLocalizedTitle() ?? config('app.name') }}">
@@ -160,10 +166,7 @@
     
     {{-- Footer --}}
     <x-footer />
-    
-    {{-- Language Switcher --}}
-    <x-language-switcher />
-    
+
     {{-- Scripts --}}
     @stack('scripts')
     
