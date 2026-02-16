@@ -121,7 +121,7 @@
                     @error('presentation_pdf')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
-                    <p class="text-gray-500 text-sm mt-1">Max size: 10MB. PDF only. Upload new file to replace.</p>
+                    <p class="text-gray-500 text-sm mt-1">Max size: 50MB. PDF only. Upload new file to replace.</p>
                 </div>
 
                 {{-- URLs --}}
