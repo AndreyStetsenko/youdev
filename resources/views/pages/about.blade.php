@@ -1,20 +1,20 @@
 <x-layouts.app>
-    {{-- Hero Section --}}
-    <section class="bg-gradient-to-br from-trust-50 via-white to-navy-50 pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-                    {{ __('app.about_title') }}
-                </h1>
-                <p class="text-xl text-navy-700 max-w-3xl mx-auto">
-                    {{ __('app.about_description') }}
-                </p>
-            </div>
+    {{-- Hero --}}
+    <section class="bg-navy-950 pt-24 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <p class="section-label text-trust-400 mb-4">{{ __('app.about') }}</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                {{ __('app.about_title') }}
+            </h1>
+            <p class="text-xl text-navy-300 max-w-2xl mx-auto">
+                {{ __('app.about_description') }}
+            </p>
         </div>
     </section>
 
     {{-- Team Values --}}
-    <section class="bg-white py-20">
+    <section class="bg-white py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -91,81 +91,67 @@
     </section>
 
     {{-- Process Section --}}
-    <section class="bg-gradient-to-r from-trust-50 via-gray-50 to-navy-50 py-20">
+    <section class="bg-navy-50 py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+            <div class="mb-16">
+                <p class="section-label mb-3">01</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-4">
                     {{ __('app.work_process') }}
                 </h2>
-                <p class="text-xl text-navy-700">
+                <p class="text-xl text-navy-600 max-w-2xl">
                     {{ __('app.work_process_desc') }}
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 {{-- Step 1 --}}
                 <div class="text-center group">
-                    <div class="w-16 h-16 bg-trust-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-trust-200 transition-colors shadow-md">
-                        <span class="text-2xl font-bold text-trust-600">1</span>
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">01</span>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">{{ __('app.analysis') }}</h3>
+                        <p class="text-navy-600">{{ __('app.analysis_desc') }}</p>
                     </div>
-                    <h3 class="text-xl font-semibold text-navy-900 mb-2">
-                        {{ __('app.analysis') }}
-                    </h3>
-                    <p class="text-navy-700">
-                        {{ __('app.analysis_desc') }}
-                    </p>
                 </div>
 
                 {{-- Step 2 --}}
                 <div class="text-center group">
-                    <div class="w-16 h-16 bg-trust-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-trust-200 transition-colors shadow-md">
-                        <span class="text-2xl font-bold text-trust-600">2</span>
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">02</span>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">{{ __('app.design') }}</h3>
+                        <p class="text-navy-600">{{ __('app.design_desc') }}</p>
                     </div>
-                    <h3 class="text-xl font-semibold text-navy-900 mb-2">
-                        {{ __('app.design') }}
-                    </h3>
-                    <p class="text-navy-700">
-                        {{ __('app.design_desc') }}
-                    </p>
                 </div>
 
                 {{-- Step 3 --}}
                 <div class="text-center group">
-                    <div class="w-16 h-16 bg-trust-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-trust-200 transition-colors shadow-md">
-                        <span class="text-2xl font-bold text-trust-600">3</span>
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">03</span>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">{{ __('app.development') }}</h3>
+                        <p class="text-navy-600">{{ __('app.development_desc') }}</p>
                     </div>
-                    <h3 class="text-xl font-semibold text-navy-900 mb-2">
-                        {{ __('app.development') }}
-                    </h3>
-                    <p class="text-navy-700">
-                        {{ __('app.development_desc') }}
-                    </p>
                 </div>
 
                 {{-- Step 4 --}}
                 <div class="text-center group">
-                    <div class="w-16 h-16 bg-trust-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-trust-200 transition-colors shadow-md">
-                        <span class="text-2xl font-bold text-trust-600">4</span>
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">04</span>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold text-navy-900 mb-2">{{ __('app.launch') }}</h3>
+                        <p class="text-navy-600">{{ __('app.launch_desc') }}</p>
                     </div>
-                    <h3 class="text-xl font-semibold text-navy-900 mb-2">
-                        {{ __('app.launch') }}
-                    </h3>
-                    <p class="text-navy-700">
-                        {{ __('app.launch_desc') }}
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     {{-- Technologies Section --}}
-    <section class="bg-white py-20">
+    <section class="bg-white py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+            <div class="mb-16">
+                <p class="section-label mb-3">02</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-4">
                     {{ __('app.technologies_tools') }}
                 </h2>
-                <p class="text-xl text-navy-700">
+                <p class="text-xl text-navy-600 max-w-2xl">
                     {{ __('app.technologies_desc') }}
                 </p>
             </div>
@@ -190,30 +176,31 @@
 
                 @foreach($technologies as $tech)
                     <div class="text-center group">
-                        <div class="w-16 h-16 bg-trust-50 border border-trust-200 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-trust-100 group-hover:border-trust-300 transition-colors shadow-sm">
-                            <span class="text-2xl font-bold text-trust-600">
+                        <div class="w-16 h-16 bg-navy-50 border border-navy-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-trust-50 group-hover:border-trust-200 transition-colors">
+                            <span class="text-xl font-bold text-trust-600">
                                 {{ substr($tech['name'], 0, 1) }}
                             </span>
                         </div>
-                        <h3 class="text-sm font-medium text-navy-900">{{ $tech['name'] }}</h3>
+                        <h3 class="text-sm font-semibold text-navy-900">{{ $tech['name'] }}</h3>
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
 
-    {{-- CTA Section --}}
-    <section class="bg-gradient-to-br from-trust-600 via-trust-700 to-navy-800 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+    {{-- CTA --}}
+    <section class="bg-navy-950 py-24 lg:py-32">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
                 {{ __('app.ready_to_start') }}
             </h2>
-            <p class="text-xl text-trust-100 mb-8 max-w-2xl mx-auto">
+            <p class="text-xl text-navy-300 mb-10">
                 {{ __('app.ready_to_start_desc') }}
             </p>
-            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-               class="bg-white hover:bg-trust-50 text-trust-700 hover:text-trust-800 px-8 py-3 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+               class="inline-flex items-center bg-trust-500 hover:bg-trust-400 text-white px-10 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-trust-500/25">
                 {{ __('app.get_consultation') }}
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
         </div>
     </section>

@@ -70,8 +70,7 @@
     
     {{-- Fonts with Preload --}}
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link rel="preload" href="https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap"></noscript>
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=plus-jakarta-sans:400,500,600,700,800|instrument-sans:400,500,600,700&display=swap">
     
     {{-- Structured Data --}}
     <script type="application/ld+json">
@@ -155,12 +154,12 @@
     {{-- Additional Head Content --}}
     @stack('head')
 </head>
-<body class="bg-trust-50 font-sans antialiased">
+<body class="bg-white font-sans antialiased text-navy-900">
     {{-- Navigation --}}
     <x-navigation />
     
     {{-- Main Content --}}
-    <main class="pt-20">
+    <main class="pt-[65px]">
         {{ $slot }}
     </main>
     

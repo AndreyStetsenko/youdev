@@ -60,7 +60,7 @@
                         <span class="text-sm font-medium text-gray-700">DS</span>
                     </div>
                     <div>
-                        <div class="text-sm font-medium text-gray-900">DevStudio Team</div>
+                        <div class="text-sm font-medium text-gray-900">{{ config('app.name') }} Team</div>
                         <div class="text-sm text-gray-500">
                             @if(app()->getLocale() === 'uk')
                                 Автор

@@ -5,7 +5,7 @@
     $urlEn = $currentRoute ? route($currentRoute, array_merge($routeParams, ['locale' => 'en'])) : url('/en');
     $urlUk = $currentRoute ? route($currentRoute, array_merge($routeParams, ['locale' => 'uk'])) : url('/uk');
 @endphp
-<nav class="bg-white shadow-lg fixed w-full z-50 border-b border-trust-100" x-data="{ mobileMenuOpen: false, langOpen: false }">
+<nav class="bg-white/95 backdrop-blur-md fixed w-full z-50 border-b border-navy-100 shadow-sm" x-data="{ mobileMenuOpen: false, langOpen: false }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             {{-- Logo --}}
@@ -75,8 +75,8 @@
                 </div>
 
                 {{-- CTA Button --}}
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-                   class="bg-gradient-to-r from-trust-600 to-trust-700 hover:from-trust-700 hover:to-trust-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all shadow-md hover:shadow-lg transform hover:scale-105">
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+                   class="bg-trust-600 hover:bg-trust-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-trust-500/20">
                     {{ __('app.get_consultation') }}
                 </a>
             </div>

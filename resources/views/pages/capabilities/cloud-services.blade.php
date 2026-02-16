@@ -1,35 +1,29 @@
 <x-layouts.app>
-    {{-- Hero Section --}}
-    <section class="bg-gradient-to-br from-green-900 via-green-800 to-blue-900 pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white">
-                <div class="mb-6">
-                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-500/20 text-green-200 border border-green-400/30">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-                        </svg>
-                        @if(app()->getLocale() === 'uk')
-                            Хмарні сервіси
-                        @else
-                            Cloud Services
-                        @endif
-                    </span>
-                </div>
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
-                    @if(app()->getLocale() === 'uk')
-                        Хмарні рішення для <span class="text-green-400">сучасного бізнесу</span>
-                    @else
-                        Cloud Solutions for <span class="text-green-400">Modern Business</span>
-                    @endif
-                </h1>
-                <p class="text-xl text-green-100 max-w-4xl mx-auto leading-relaxed">
+    <section class="bg-navy-950 pt-24 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="mb-6">
+                <span class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-medium bg-trust-500/20 text-trust-300 border border-trust-400/30">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                    </svg>
+                    @if(app()->getLocale() === 'uk') Хмарні сервіси @else Cloud Services @endif
+                </span>
+            </div>
+            <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6">
+                @if(app()->getLocale() === 'uk')
+                    Хмарні рішення для <span class="text-trust-400">сучасного бізнесу</span>
+                @else
+                    Cloud Solutions for <span class="text-trust-400">Modern Business</span>
+                @endif
+            </h1>
+            <p class="text-xl text-navy-300 max-w-2xl mx-auto leading-relaxed">
                     @if(app()->getLocale() === 'uk')
                         Масштабуйте ваш бізнес з надійними хмарними рішеннями. Від стратегії до впровадження - ми забезпечуємо безперебійну міграцію та оптимізацію.
                     @else
                         Scale your business with reliable cloud solutions. From strategy to implementation - we ensure seamless migration and optimization.
                     @endif
                 </p>
-            </div>
         </div>
     </section>
 

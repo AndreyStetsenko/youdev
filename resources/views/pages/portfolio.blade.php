@@ -1,29 +1,29 @@
 <x-layouts.app>
-    {{-- Hero Section --}}
-    <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    {{ __('app.portfolio_title') }}
-                </h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    @if(app()->getLocale() === 'uk')
-                        Ознайомтеся з нашими успішними проектами та рішеннями, які ми створили для наших клієнтів
-                    @else
-                        Explore our successful projects and solutions we've created for our clients
-                    @endif
-                </p>
-            </div>
+    {{-- Hero --}}
+    <section class="bg-navy-950 pt-24 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <p class="section-label text-trust-400 mb-4">{{ __('app.portfolio') }}</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                {{ __('app.portfolio_title') }}
+            </h1>
+            <p class="text-xl text-navy-300 max-w-2xl mx-auto">
+                @if(app()->getLocale() === 'uk')
+                    Ознайомтеся з нашими успішними проектами та рішеннями для клієнтів
+                @else
+                    Explore our successful projects and solutions we've created for our clients
+                @endif
+            </p>
         </div>
     </section>
 
     {{-- Portfolio Filter --}}
-    <section class="bg-white py-8 sticky top-16 z-40 border-b">
+    <section class="bg-white py-6 sticky top-16 z-40 border-b border-navy-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center gap-4" x-data="{ activeFilter: 'all' }">
+            <div class="flex flex-wrap justify-center gap-3" x-data="{ activeFilter: 'all' }">
                 <button @click="activeFilter = 'all'; filterProjects('all')"
-                        :class="activeFilter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
-                        class="px-6 py-2 rounded-lg font-medium transition-colors">
+                        :class="activeFilter === 'all' ? 'bg-trust-600 text-white' : 'bg-navy-50 text-navy-700 hover:bg-navy-100'"
+                        class="px-5 py-2.5 rounded-xl font-medium transition-colors">
                     @if(app()->getLocale() === 'uk')
                         Всі проекти
                     @else
@@ -32,8 +32,8 @@
                 </button>
                 @foreach($categories as $category)
                     <button @click="activeFilter = '{{ $category }}'; filterProjects('{{ $category }}')"
-                            :class="activeFilter === '{{ $category }}' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
-                            class="px-6 py-2 rounded-lg font-medium transition-colors">
+                            :class="activeFilter === '{{ $category }}' ? 'bg-trust-600 text-white' : 'bg-navy-50 text-navy-700 hover:bg-navy-100'"
+                            class="px-5 py-2.5 rounded-xl font-medium transition-colors">
                         {{ __('app.project_' . $category) }}
                     </button>
                 @endforeach
@@ -42,11 +42,11 @@
     </section>
 
     {{-- Portfolio Grid --}}
-    <section class="bg-gray-50 py-20">
+    <section class="bg-navy-50 py-16 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
                 @foreach($projects as $project)
-                    <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow" 
+                    <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-navy-100 transition-all duration-300"
                          data-category="{{ $project->category }}">
                         @if($project->image)
                             <img src="{{ asset('storage/' . $project->image) }}" 
@@ -62,7 +62,7 @@
                         
                         <div class="p-6">
                             <div class="flex items-center justify-between mb-3">
-                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
+                                <span class="px-3 py-1 bg-trust-100 text-trust-700 text-sm rounded-full font-medium border border-trust-200">
                                     {{ __('app.project_' . $project->category) }}
                                 </span>
                                 @if($project->status === 'completed')
@@ -84,21 +84,21 @@
                                 @endif
                             </div>
 
-                            <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                                <a href="{{ route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $project->slug]) }}" 
-                                   class="hover:text-blue-600 transition-colors">
+                            <h3 class="text-xl font-bold text-navy-900 mb-3">
+                                <a href="{{ route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $project->slug]) }}"
+                                   class="hover:text-trust-600 transition-colors">
                                     {{ $project->getLocalizedTitle() }}
                                 </a>
                             </h3>
                             
-                            <p class="text-gray-600 mb-4 line-clamp-3">
+                            <p class="text-navy-600 mb-4 line-clamp-3">
                                 {{ $project->getLocalizedDescription() }}
                             </p>
 
                             {{-- Technologies --}}
                             <div class="flex flex-wrap gap-2 mb-6">
                                 @foreach($project->technologies as $tech)
-                                    <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded font-medium">
+                                    <span class="px-2 py-1 bg-navy-50 text-navy-700 text-xs rounded-lg font-medium border border-navy-100">
                                         {{ $tech }}
                                     </span>
                                 @endforeach
@@ -106,9 +106,10 @@
 
                             {{-- Project Links --}}
                             <div class="flex items-center justify-between">
-                                <a href="{{ route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $project->slug]) }}" 
-                                   class="text-blue-600 hover:text-blue-700 font-medium">
-                                    {{ __('app.view_project') }} →
+                                <a href="{{ route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $project->slug]) }}"
+                                   class="text-trust-600 hover:text-trust-700 font-semibold inline-flex items-center">
+                                    {{ __('app.view_project') }}
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <div class="flex space-x-2">
                                     @if($project->url)
@@ -156,17 +157,13 @@
 
             {{-- Empty State --}}
             <div id="no-results" class="text-center py-12 hidden">
-                <svg class="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-16 h-16 text-navy-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                 </svg>
-                <h3 class="text-lg font-medium text-gray-900 mb-2">
-                    @if(app()->getLocale() === 'uk')
-                        Проектів не знайдено
-                    @else
-                        No projects found
-                    @endif
+                <h3 class="text-lg font-semibold text-navy-900 mb-2">
+                    @if(app()->getLocale() === 'uk') Проектів не знайдено @else No projects found @endif
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-navy-600">
                     @if(app()->getLocale() === 'uk')
                         Спробуйте вибрати іншу категорію або переглянути всі проекти
                     @else
@@ -177,26 +174,23 @@
         </div>
     </section>
 
-    {{-- CTA Section --}}
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                @if(app()->getLocale() === 'uk')
-                    Хочете такий же проект?
-                @else
-                    Want a Similar Project?
-                @endif
+    {{-- CTA --}}
+    <section class="bg-navy-950 py-24 lg:py-32">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                @if(app()->getLocale() === 'uk') Хочете такий же проект? @else Want a Similar Project? @endif
             </h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p class="text-xl text-navy-300 mb-10">
                 @if(app()->getLocale() === 'uk')
-                    Розкажіть нам про свої потреби, і ми створимо унікальне рішення для вашого бізнесу
+                    Розкажіть нам про свої потреби — ми створимо унікальне рішення для вашого бізнесу
                 @else
                     Tell us about your needs and we'll create a unique solution for your business
                 @endif
             </p>
-            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-               class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg font-medium transition-colors">
+            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+               class="inline-flex items-center bg-trust-500 hover:bg-trust-400 text-white px-10 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-trust-500/25">
                 {{ __('app.get_consultation') }}
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
         </div>
     </section>

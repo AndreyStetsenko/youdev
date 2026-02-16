@@ -23,64 +23,41 @@
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
-    {{-- Hero Section --}}
-    <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-8">
-                <nav class="flex justify-center mb-4" aria-label="Breadcrumb">
-                    <ol class="flex items-center space-x-2 text-sm">
-                        <li>
-                            <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" 
-                               class="text-gray-500 hover:text-gray-700">
-                                {{ __('app.home') }}
-                            </a>
-                        </li>
-                        <li class="text-gray-400">/</li>
-                        <li>
-                            <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}" 
-                               class="text-gray-500 hover:text-gray-700">
-                                {{ __('app.portfolio') }}
-                            </a>
-                        </li>
-                        <li class="text-gray-400">/</li>
-                        <li class="text-gray-900">{{ $portfolio->getLocalizedTitle() }}</li>
-                    </ol>
-                </nav>
-                
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    {{ $portfolio->getLocalizedTitle() }}
-                </h1>
-                
-                <div class="flex flex-wrap justify-center gap-4 mb-6">
-                    <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">
-                        {{ __('app.project_' . $portfolio->category) }}
-                    </span>
+    {{-- Hero --}}
+    <section class="bg-navy-950 pt-24 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2 text-sm">
+                    <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="text-navy-400 hover:text-white transition-colors">{{ __('app.home') }}</a></li>
+                    <li class="text-navy-500">/</li>
+                    <li><a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}" class="text-navy-400 hover:text-white transition-colors">{{ __('app.portfolio') }}</a></li>
+                    <li class="text-navy-500">/</li>
+                    <li class="text-white font-medium truncate max-w-[200px] sm:max-w-none">{{ $portfolio->getLocalizedTitle() }}</li>
+                </ol>
+            </nav>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                {{ $portfolio->getLocalizedTitle() }}
+            </h1>
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <span class="px-4 py-2 bg-trust-500/20 text-trust-300 rounded-xl font-medium border border-trust-400/30">
+                    {{ __('app.project_' . $portfolio->category) }}
+                </span>
                     @if($portfolio->status === 'completed')
-                        <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full font-medium">
-                            @if(app()->getLocale() === 'uk')
-                                Завершено
-                            @else
-                                Completed
-                            @endif
+                        <span class="px-4 py-2 bg-green-500/20 text-green-300 rounded-xl font-medium border border-green-400/30">
+                            @if(app()->getLocale() === 'uk') Завершено @else Completed @endif
                         </span>
                     @endif
                     @if($portfolio->is_featured)
-                        <span class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full font-medium">
-                            ⭐ 
-                            @if(app()->getLocale() === 'uk')
-                                Рекомендований
-                            @else
-                                Featured
-                            @endif
+                        <span class="px-4 py-2 bg-amber-500/20 text-amber-300 rounded-xl font-medium border border-amber-400/30">
+                            ⭐ @if(app()->getLocale() === 'uk') Рекомендований @else Featured @endif
                         </span>
                     @endif
-                </div>
-
-                {{-- Quick Links --}}
-                <div class="flex flex-wrap justify-center gap-4">
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
                     @if($portfolio->url)
-                        <a href="{{ $portfolio->url }}" target="_blank" 
-                           class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
+                        <a href="{{ $portfolio->url }}" target="_blank"
+                           class="bg-trust-500 hover:bg-trust-400 text-white px-6 py-3 rounded-xl font-semibold transition-colors inline-flex items-center shadow-lg shadow-trust-500/25">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                             </svg>
@@ -88,8 +65,8 @@
                         </a>
                     @endif
                     @if($portfolio->github_url)
-                        <a href="{{ $portfolio->github_url }}" target="_blank" 
-                           class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
+                        <a href="{{ $portfolio->github_url }}" target="_blank"
+                           class="bg-navy-800 hover:bg-navy-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors inline-flex items-center border border-navy-600">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -101,11 +78,10 @@
         </div>
     </section>
 
-    {{-- Project Image --}}
     @if($portfolio->image)
-        <section class="bg-white py-16">
+        <section class="bg-navy-50 py-16 lg:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-navy-100">
                     <img src="{{ asset('storage/' . $portfolio->image) }}" 
                          alt="{{ $portfolio->getLocalizedTitle() }}" 
                          class="w-full h-96 object-cover">
@@ -116,18 +92,14 @@
 
     {{-- Presentation PDF --}}
     @if($portfolio->presentation_pdf ?? null)
-        <section class="bg-gray-50 py-16">
+        <section class="bg-white py-16 lg:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-2xl font-bold text-gray-900">
-                        @if(app()->getLocale() === 'uk')
-                            Презентація
-                        @else
-                            Presentation
-                        @endif
+                    <h2 class="text-2xl font-bold text-navy-900">
+                        @if(app()->getLocale() === 'uk') Презентація @else Presentation @endif
                     </h2>
                     <a href="{{ asset('storage/' . $portfolio->presentation_pdf) }}" target="_blank" rel="noopener"
-                       class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-2">
+                       class="text-trust-600 hover:text-trust-700 font-semibold inline-flex items-center gap-2">
                         @if(app()->getLocale() === 'uk')
                             Відкрити в новій вкладці
                         @else
@@ -150,7 +122,7 @@
     @endif
 
     {{-- Project Details --}}
-    <section class="bg-gray-50 py-20">
+    <section class="bg-navy-50 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 {{-- Main Content --}}
@@ -249,7 +221,7 @@
                     </div>
 
                     {{-- Contact CTA --}}
-                    <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+                    <div class="bg-navy-900 rounded-2xl p-6 text-white border border-navy-700">
                         <h3 class="text-lg font-semibold mb-3">
                             @if(app()->getLocale() === 'uk')
                                 Хочете подібний проект?
@@ -257,7 +229,7 @@
                                 Want a Similar Project?
                             @endif
                         </h3>
-                        <p class="text-blue-100 mb-4">
+                        <p class="text-navy-300 mb-4">
                             @if(app()->getLocale() === 'uk')
                                 Розкажіть нам про свої потреби
                             @else
@@ -265,7 +237,7 @@
                             @endif
                         </p>
                         <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-                           class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-2 rounded-lg font-medium transition-colors inline-block">
+                           class="bg-white hover:bg-navy-50 text-trust-600 px-6 py-2 rounded-xl font-semibold transition-colors inline-block">
                             {{ __('app.get_consultation') }}
                         </a>
                     </div>
@@ -326,25 +298,18 @@
     @endif
 
     {{-- CTA Section --}}
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                @if(app()->getLocale() === 'uk')
-                    Готові почати свій проект?
-                @else
-                    Ready to Start Your Project?
-                @endif
+    <section class="bg-navy-950 py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                @if(app()->getLocale() === 'uk') Готові почати свій проект? @else Ready to Start Your Project? @endif
             </h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                @if(app()->getLocale() === 'uk')
-                    Розкажіть нам про свої ідеї
-                @else
-                    Tell us about your ideas
-                @endif
+            <p class="text-xl text-navy-300 mb-10 max-w-2xl mx-auto">
+                @if(app()->getLocale() === 'uk') Розкажіть нам про свої ідеї @else Tell us about your ideas @endif
             </p>
-            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-               class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg font-medium transition-colors">
+            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+               class="inline-flex items-center bg-trust-500 hover:bg-trust-400 text-white px-10 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-trust-500/25">
                 {{ __('app.get_consultation') }}
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
         </div>
     </section>

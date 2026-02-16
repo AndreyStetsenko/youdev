@@ -91,205 +91,82 @@
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
     </script>
-    {{-- Hero Section - More Professional --}}
-    <section class="relative bg-gradient-to-br from-trust-50 via-white to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="mb-6">
-                        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-trust-100 text-trust-800 border border-trust-200 shadow-sm">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                            </svg>
-                            {{ __('app.professional_development') }}
-                        </span>
-                    </div>
-                    <h1 class="text-5xl lg:text-6xl font-bold text-navy-900 leading-tight mb-6">
-                        {{ __('app.hero_title') }}
-                    </h1>
-                    <p class="text-xl text-navy-700 mb-8 leading-relaxed">
-                        {{ __('app.hero_description') }}
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-                           class="bg-gradient-to-r from-trust-600 to-trust-700 hover:from-trust-700 hover:to-trust-800 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 text-center shadow-lg hover:shadow-xl">
-                            {{ __('app.start_project') }}
-                        </a>
-                        <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}" 
-                           class="border-2 border-trust-300 hover:border-trust-500 text-trust-700 hover:text-trust-800 hover:bg-trust-50 px-8 py-4 rounded-lg font-semibold transition-all text-center">
-                            {{ __('app.our_work') }}
-                        </a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="relative z-10 bg-white rounded-2xl shadow-2xl p-8 border border-trust-100">
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center mr-4 shadow-sm">
-                                    <svg class="w-6 h-6 text-trust-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-navy-900">
-                                        {{ __('app.web_development') }}
-                                    </h3>
-                                    <p class="text-navy-600 text-sm">
-                                        {{ __('app.web_development_tech') }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center mr-4 shadow-sm">
-                                    <svg class="w-6 h-6 text-trust-600" version="1.1" id="DESIGN" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1800 1800" enable-background="new 0 0 1800 1800" xml:space="preserve">
-                                    <g id="Layer">
-                                        <g>
-                                            <path fill="currentColor" d="M1541.606,1540.146l0.009-0.008c35.598-35.594,35.598-93.52,0-129.121
-                                                c-17.24-17.236-40.178-26.745-64.569-26.745c-24.378,0-47.314,9.509-64.564,26.763c-35.588,35.584-35.588,93.51,0.009,129.104
-                                                C1448.096,1575.73,1506.014,1575.73,1541.606,1540.146z M1440.885,1511.743c-9.656-9.655-14.975-22.498-14.975-36.165
-                                                c0-13.659,5.318-26.511,14.975-36.167c9.665-9.655,22.512-14.979,36.175-14.979c13.659,0,26.497,5.323,36.161,14.979
-                                                c19.938,19.945,19.938,52.387-0.008,72.332C1493.271,1531.689,1460.831,1531.681,1440.885,1511.743z"/>
-                                            <path fill="currentColor" d="M1700.934,402.736c0.021-0.026,0.047-0.043,0.068-0.065c0.044-0.043,0.083-0.091,0.127-0.134l5.504-5.505
-                                                l-0.138-0.139c81.836-87.814,80.038-225.814-5.507-311.356c-42.353-42.357-98.664-65.685-158.565-65.685
-                                                c-57.228,0-111.154,21.339-152.792,60.18l-0.134-0.134l-5.511,5.507c-0.043,0.046-0.09,0.085-0.134,0.131
-                                                c-0.021,0.021-0.039,0.045-0.061,0.069L66.371,1403.02l0.513,0.513c-7.364,4.749-12.699,12.548-13.98,21.907L9.578,1741.903
-                                                c-1.319,9.647,1.95,19.347,8.831,26.232c5.875,5.87,13.807,9.108,22.004,9.108c1.402,0,2.813-0.095,4.224-0.286l316.451-43.338
-                                                c9.365-1.276,17.163-6.617,21.912-13.98l0.512,0.513L1700.934,402.736z M1542.423,82.094c43.272,0,83.954,16.852,114.551,47.452
-                                                c55.643,55.638,62.276,142.02,19.897,204.983L1451.973,109.64C1478.482,91.724,1509.717,82.094,1542.423,82.094z
-                                                M1389.497,167.919l229.113,229.112L383.512,1632.129l-86.195-86.19l991.423-991.409l-59.351-59.342l-991.41,991.418
-                                                l-83.585-83.586L1389.497,167.919z M76.804,1709.731l35.68-260.604l224.915,224.916L76.804,1709.731z"/>
-                                            <path fill="currentColor" d="M506.941,804.479l56.789-56.789l-454.446-454.45l185.432-185.437l87.924,87.932l-63.792,63.783
-                                                l50.362,50.359l63.792-63.779l51.262,51.258l-63.792,63.788l50.363,50.354l63.797-63.779l51.257,51.267l-94.375,94.353
-                                                l50.376,50.363l94.362-94.362l62.502,62.498l-63.792,63.801l50.363,50.354l63.792-63.792l0.043,0.047l56.789-56.789
-                                                L323.106,22.622c-15.682-15.686-41.102-15.686-56.784,0L24.102,264.845c-15.687,15.683-15.687,41.107,0,56.789L506.941,804.479z"
-                                                />
-                                            <path fill="currentColor" d="M1778.944,1478.287c-0.726-0.729-1.478-1.424-2.241-2.085l-505.282-505.273l-151.159,151.159l50.259,50.26
-                                                l94.371-94.37l428.79,428.782l-185.441,185.432l-479.045-479.041l-56.789,56.798l507.437,507.427
-                                                c15.682,15.69,41.102,15.69,56.788,0l242.234-242.213c0.021-0.034,0.048-0.052,0.079-0.086
-                                                C1794.63,1519.402,1794.63,1493.969,1778.944,1478.287z"/>
-                                        </g>
-                                    </g>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-navy-900">
-                                        {{ __('app.ui_ux_design') }}
-                                    </h3>
-                                    <p class="text-navy-600 text-sm">
-                                        {{ __('app.ui_ux_design_tech') }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center mr-4 shadow-sm">
-                                    <svg class="w-6 h-6 text-trust-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-navy-900">
-                                        {{ __('app.digital_marketing') }}
-                                    </h3>
-                                    <p class="text-navy-600 text-sm">
-                                        {{ __('app.digital_marketing_tech') }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center mr-4 shadow-sm">
-                                    <svg class="w-6 h-6 text-trust-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-navy-900">
-                                        {{ __('app.mobile_development') }}
-                                    </h3>
-                                    <p class="text-navy-600 text-sm">
-                                        {{ __('app.mobile_development_tech') }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- Background decoration --}}
-                    <div class="absolute inset-0 bg-gradient-to-br from-trust-50 to-trust-100 rounded-2xl transform rotate-6 shadow-lg"></div>
+    {{-- Hero Section — agency style (Brainlab / WebCase / ILION) --}}
+    <section class="relative min-h-[85vh] flex items-center bg-navy-950 overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-30"></div>
+        <div class="absolute top-1/4 -right-32 w-96 h-96 bg-trust-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 -left-32 w-80 h-80 bg-trust-400/10 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+            <div class="max-w-4xl">
+                <p class="section-label text-trust-400 mb-6">
+                    {{ __('app.professional_development') }}
+                </p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-6">
+                    {{ __('app.hero_title') }}
+                </h1>
+                <p class="text-lg sm:text-xl text-navy-300 max-w-2xl mb-10 leading-relaxed">
+                    {{ __('app.hero_description') }}
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+                       class="inline-flex items-center justify-center bg-trust-500 hover:bg-trust-400 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg shadow-trust-500/25 hover:shadow-trust-500/40">
+                        {{ __('app.start_project') }}
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}"
+                       class="inline-flex items-center justify-center border-2 border-navy-500 text-navy-200 hover:border-trust-400 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200">
+                        {{ __('app.our_work') }}
+                    </a>
                 </div>
             </div>
         </div>
-        {{-- Background pattern --}}
-        {{-- <div class="absolute inset-0 bg-grid-pattern opacity-5"></div> --}}
     </section>
 
-    {{-- Trust Indicators --}}
-    <section class="bg-gradient-to-r from-trust-50 via-gray-50 to-trust-50 py-16 border-t border-trust-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-sm font-semibold text-trust-700 uppercase tracking-wider">
-                    @if(app()->getLocale() === 'uk')
-                        Нам довіряють
-                    @else
-                        Trusted by
-                    @endif
-                </h2>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-                <div class="text-center group">
-                    <div class="text-4xl font-bold text-trust-600 mb-2 group-hover:text-trust-700 transition-colors">5+</div>
-                    <p class="text-navy-700 font-medium">
-                        @if(app()->getLocale() === 'uk')
-                            Років досвіду
-                        @else
-                            Years Experience
-                        @endif
+    {{-- Stats strip — dark bar (WebCase / Brainlab style) --}}
+    <section class="bg-navy-900 border-y border-navy-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div class="text-center lg:text-left">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-white tabular-nums">5+</div>
+                    <p class="text-navy-400 font-medium mt-1">
+                        @if(app()->getLocale() === 'uk') Років досвіду @else Years Experience @endif
                     </p>
                 </div>
-                <div class="text-center group">
-                    <div class="text-4xl font-bold text-trust-600 mb-2 group-hover:text-trust-700 transition-colors">70+</div>
-                    <p class="text-navy-700 font-medium">
-                        @if(app()->getLocale() === 'uk')
-                            Проектів
-                        @else
-                            Projects
-                        @endif
+                <div class="text-center lg:text-left">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-white tabular-nums">70+</div>
+                    <p class="text-navy-400 font-medium mt-1">
+                        @if(app()->getLocale() === 'uk') Проектів @else Projects @endif
                     </p>
                 </div>
-                <div class="text-center group">
-                    <div class="text-4xl font-bold text-trust-600 mb-2 group-hover:text-trust-700 transition-colors">50+</div>
-                    <p class="text-navy-700 font-medium">
-                        @if(app()->getLocale() === 'uk')
-                            Клієнтів
-                        @else
-                            Clients
-                        @endif
+                <div class="text-center lg:text-left">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-white tabular-nums">50+</div>
+                    <p class="text-navy-400 font-medium mt-1">
+                        @if(app()->getLocale() === 'uk') Клієнтів @else Clients @endif
                     </p>
                 </div>
-                <div class="text-center group">
-                    <div class="text-4xl font-bold text-trust-600 mb-2 group-hover:text-trust-700 transition-colors">24/7</div>
-                    <p class="text-navy-700 font-medium">
-                        @if(app()->getLocale() === 'uk')
-                            Підтримка
-                        @else
-                            Support
-                        @endif
+                <div class="text-center lg:text-left">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-white tabular-nums">24/7</div>
+                    <p class="text-navy-400 font-medium mt-1">
+                        @if(app()->getLocale() === 'uk') Підтримка @else Support @endif
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- Services Section --}}
-    <section class="bg-white py-24">
+    {{-- Services Section — numbered, card style (Brainlab / Impulse) --}}
+    <section class="bg-white py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-navy-900 mb-4">
+            <div class="mb-16">
+                <p class="section-label mb-3">01</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-4">
                     @if(app()->getLocale() === 'uk')
                         Наші послуги
                     @else
                         Our Services
                     @endif
                 </h2>
-                <p class="text-xl text-navy-700 max-w-3xl mx-auto">
+                <p class="text-xl text-navy-600 max-w-2xl">
                     @if(app()->getLocale() === 'uk')
                         Повний спектр послуг для розвитку вашого бізнесу
                     @else
@@ -551,34 +428,113 @@
                 </div>
             </div>
 
-            <div class="text-center mt-12">
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-                   class="bg-gradient-to-r from-trust-600 to-trust-700 hover:from-trust-700 hover:to-trust-800 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <div class="text-center mt-14">
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+                   class="inline-flex items-center bg-trust-600 hover:bg-trust-700 text-white px-8 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-trust-500/20">
                     {{ __('app.get_consultation') }}
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
-                    </div>
-                </div>
+            </div>
+        </div>
     </section>
 
-    {{-- Why Choose Us --}}
-    <section class="bg-gray-50 py-24">
+    {{-- How we work / Process — numbered steps (WebCase / Impulse) --}}
+    <section class="bg-navy-50 py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-navy-900 mb-4">
+            <div class="mb-16">
+                <p class="section-label text-trust-600 mb-3">02</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-4">
+                    @if(app()->getLocale() === 'uk')
+                        Як ми працюємо
+                    @else
+                        How We Work
+                    @endif
+                </h2>
+                <p class="text-xl text-navy-600 max-w-2xl">
+                    @if(app()->getLocale() === 'uk')
+                        Прозорі етапи від ідеї до запуску
+                    @else
+                        Transparent steps from idea to launch
+                    @endif
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="relative">
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">01</span>
+                    <h3 class="text-xl font-bold text-navy-900 mt-2 mb-2">
+                        @if(app()->getLocale() === 'uk') Заявка та бриф @else Brief &amp; Request @endif
+                    </h3>
+                    <p class="text-navy-600">
+                        @if(app()->getLocale() === 'uk')
+                            Обговорюємо цілі, аудиторію та формат проекту.
+                        @else
+                            We align on goals, audience and project format.
+                        @endif
+                    </p>
+                </div>
+                <div class="relative">
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">02</span>
+                    <h3 class="text-xl font-bold text-navy-900 mt-2 mb-2">
+                        @if(app()->getLocale() === 'uk') Прототип і дизайн @else Prototype &amp; Design @endif
+                    </h3>
+                    <p class="text-navy-600">
+                        @if(app()->getLocale() === 'uk')
+                            Структура, макети та узгодження з вами.
+                        @else
+                            Structure, mockups and approval with you.
+                        @endif
+                    </p>
+                </div>
+                <div class="relative">
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">03</span>
+                    <h3 class="text-xl font-bold text-navy-900 mt-2 mb-2">
+                        @if(app()->getLocale() === 'uk') Розробка @else Development @endif
+                    </h3>
+                    <p class="text-navy-600">
+                        @if(app()->getLocale() === 'uk')
+                            Верстка, backend та інтеграції.
+                        @else
+                            Frontend, backend and integrations.
+                        @endif
+                    </p>
+                </div>
+                <div class="relative">
+                    <span class="text-5xl font-extrabold text-trust-200/80 leading-none">04</span>
+                    <h3 class="text-xl font-bold text-navy-900 mt-2 mb-2">
+                        @if(app()->getLocale() === 'uk') Запуск і підтримка @else Launch &amp; Support @endif
+                    </h3>
+                    <p class="text-navy-600">
+                        @if(app()->getLocale() === 'uk')
+                            Тестування, деплой та супровід після запуску.
+                        @else
+                            Testing, deploy and ongoing support.
+                        @endif
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Why Choose Us — 03 --}}
+    <section class="bg-white py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16">
+                <p class="section-label mb-3">03</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-4">
                     @if(app()->getLocale() === 'uk')
                         Чому обирають нас
                     @else
                         Why Choose Us
                     @endif
                 </h2>
-                <p class="text-xl text-navy-700 max-w-3xl mx-auto">
+                <p class="text-xl text-navy-600 max-w-2xl">
                     @if(app()->getLocale() === 'uk')
                         Наш підхід до роботи та досвід роботи з клієнтами
                     @else
                         Our approach to work and experience with clients
                     @endif
                 </p>
-                </div>
+            </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {{-- Modern Technologies --}}
@@ -754,19 +710,20 @@
         </div>
     </section>
 
-    {{-- Featured Portfolio --}}
-    <section class="bg-gray-50 py-24">
+    {{-- Featured Portfolio — 04, overlay style --}}
+    <section class="bg-navy-50 py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-end mb-12">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-14">
                 <div>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    <p class="section-label mb-3">04</p>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-2">
                         @if(app()->getLocale() === 'uk')
-                            Наші успішні проекти
+                            Наші роботи
                         @else
-                            Our Success Stories
+                            Our Work
                         @endif
                     </h2>
-                    <p class="text-xl text-gray-600">
+                    <p class="text-xl text-navy-600">
                         @if(app()->getLocale() === 'uk')
                             Рішення, які приносять результат
                         @else
@@ -774,16 +731,10 @@
                         @endif
                     </p>
                 </div>
-                <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}" 
-                   class="hidden md:inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
-                    @if(app()->getLocale() === 'uk')
-                        Всі проекти
-                    @else
-                        View All Projects
-                    @endif
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
+                <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}"
+                   class="inline-flex items-center text-trust-600 hover:text-trust-700 font-semibold shrink-0">
+                    @if(app()->getLocale() === 'uk') Всі проекти @else View All Projects @endif
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
 
@@ -797,12 +748,18 @@
                 @endphp
 
                 @forelse($featuredProjects as $project)
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+                    <a href="{{ route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $project->slug]) }}" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-navy-100">
                         @if($project->image)
-                            <div class="aspect-video overflow-hidden">
-                                <img src="{{ asset('storage/' . $project->image) }}" 
-                                     alt="{{ $project->getLocalizedTitle() }}" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="aspect-[4/3] overflow-hidden relative">
+                                <img src="{{ asset('storage/' . $project->image) }}"
+                                     alt="{{ $project->getLocalizedTitle() }}"
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/60 transition-colors duration-300 flex items-center justify-center">
+                                    <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-flex items-center px-5 py-2.5 rounded-xl bg-white text-navy-900 font-semibold text-sm">
+                                        @if(app()->getLocale() === 'uk') Дивитися кейс @else View case @endif
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                    </span>
+                                </div>
                             </div>
                         @else
                             <div class="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
@@ -826,10 +783,8 @@
                                 @endif
                             </div>
 
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                <a href="{{ route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $project->slug]) }}">
-                                    {{ $project->getLocalizedTitle() }}
-                                </a>
+                            <h3 class="text-xl font-bold text-navy-900 mb-3 group-hover:text-trust-600 transition-colors">
+                                {{ $project->getLocalizedTitle() }}
                             </h3>
                             
                             <p class="text-gray-600 mb-4 leading-relaxed">
@@ -849,19 +804,12 @@
                                 @endif
                             </div>
 
-                            <a href="{{ route('portfolio.show', ['locale' => app()->getLocale(), 'slug' => $project->slug]) }}" 
-                               class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
-                                @if(app()->getLocale() === 'uk')
-                                    Переглянути проект
-                                @else
-                                    View Project
-                                @endif
-                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                                </svg>
-                            </a>
+                            <span class="inline-flex items-center text-trust-600 font-semibold">
+                                @if(app()->getLocale() === 'uk') Переглянути проект @else View Project @endif
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </span>
                         </div>
-                    </div>
+                    </a>
                 @empty
                     {{-- Placeholder if no projects --}}
                     <div class="col-span-full text-center py-12">
@@ -877,31 +825,29 @@
             </div>
 
             <div class="text-center mt-12 md:hidden">
-                <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}" 
-                   class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                    @if(app()->getLocale() === 'uk')
-                        Всі проекти
-                    @else
-                        View All Projects
-                    @endif
+                <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}"
+                   class="inline-flex items-center bg-trust-600 hover:bg-trust-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors">
+                    @if(app()->getLocale() === 'uk') Всі проекти @else View All Projects @endif
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
         </div>
     </section>
 
     {{-- Latest Blog Posts --}}
-    <section class="bg-white py-24">
+    <section class="bg-white py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-end mb-12">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-14">
                 <div>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    <p class="section-label mb-3">05</p>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-navy-900 mb-2">
                         @if(app()->getLocale() === 'uk')
                             Останні статті
                         @else
                             Latest Insights
                         @endif
                     </h2>
-                    <p class="text-xl text-gray-600">
+                    <p class="text-xl text-navy-600">
                         @if(app()->getLocale() === 'uk')
                             Експертні думки та тренди індустрії
                         @else
@@ -909,8 +855,8 @@
                         @endif
                     </p>
                 </div>
-                <a href="{{ route('blog', ['locale' => app()->getLocale()]) }}" 
-                   class="hidden md:inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
+                <a href="{{ route('blog', ['locale' => app()->getLocale()]) }}"
+                   class="hidden md:inline-flex items-center text-trust-600 hover:text-trust-700 font-semibold shrink-0">
                     @if(app()->getLocale() === 'uk')
                         Всі статті
                     @else
@@ -991,54 +937,38 @@
             </div>
 
             <div class="text-center mt-12 md:hidden">
-                <a href="{{ route('blog', ['locale' => app()->getLocale()]) }}" 
-                   class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                    @if(app()->getLocale() === 'uk')
-                        Всі статті
-                    @else
-                        View All Posts
-                    @endif
+                <a href="{{ route('blog', ['locale' => app()->getLocale()]) }}"
+                   class="inline-flex items-center bg-trust-600 hover:bg-trust-700 text-white px-8 py-3 rounded-xl font-semibold transition-colors">
+                    @if(app()->getLocale() === 'uk') Всі статті @else View All Posts @endif
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
         </div>
     </section>
 
-    {{-- CTA Section --}}
-    <section class="bg-gradient-to-br from-navy-900 via-trust-800 to-navy-800 py-24 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-trust-900/20 to-navy-900/20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+    {{-- CTA Section — single focus (Brainlab / WebCase) --}}
+    <section class="bg-navy-950 py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 @if(app()->getLocale() === 'uk')
                     Готові трансформувати ваш бізнес?
                 @else
                     Ready to Transform Your Business?
                 @endif
             </h2>
-            <p class="text-xl text-trust-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-xl text-navy-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                 @if(app()->getLocale() === 'uk')
-                    Розкажіть нам про ваші виклики, і ми створимо технологічне рішення, яке допоможе вам досягти ваших цілей
+                    Розкажіть нам про ваші виклики — ми створимо рішення під ваші цілі.
                 @else
-                    Tell us about your challenges and we'll create a technology solution that helps you achieve your goals
+                    Tell us about your challenges and we'll create a solution that fits your goals.
                 @endif
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-                   class="bg-white hover:bg-trust-50 text-trust-800 hover:text-trust-900 px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    @if(app()->getLocale() === 'uk')
-                        Безкоштовна консультація
-                    @else
-                        Free Consultation
-                    @endif
-                </a>
-                <a href="{{ route('capabilities.data-analytics', ['locale' => app()->getLocale()]) }}" 
-                   class="border-2 border-white text-white hover:bg-white hover:text-trust-800 px-8 py-4 rounded-lg font-semibold transition-all">
-                    @if(app()->getLocale() === 'uk')
-                        Наші можливості
-                    @else
-                        Our Capabilities
-                    @endif
-                </a>
-            </div>
+            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+               class="inline-flex items-center bg-trust-500 hover:bg-trust-400 text-white px-10 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-trust-500/25">
+                @if(app()->getLocale() === 'uk') Безкоштовна консультація @else Free Consultation @endif
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
         </div>
     </section>
 </x-layouts.app>

@@ -1,22 +1,20 @@
 <x-layouts.app>
-    {{-- Hero Section --}}
-    <section class="bg-gradient-to-br from-trust-50 via-white to-navy-50 pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
-                    {{ __('app.terms_of_service') }}
-                </h1>
-                <p class="text-xl text-navy-700 max-w-3xl mx-auto">
-                    {{ __('app.terms_subtitle') }}
-                </p>
-                <p class="text-sm text-gray-500 mt-4">
-                    {{ __('app.last_updated') }}: {{ __('app.terms_last_updated') }}
-                </p>
-            </div>
+    <section class="bg-navy-950 pt-24 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <p class="section-label text-trust-400 mb-4">{{ __('app.terms_of_service') }}</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                {{ __('app.terms_of_service') }}
+            </h1>
+            <p class="text-xl text-navy-300 max-w-2xl mx-auto">
+                {{ __('app.terms_subtitle') }}
+            </p>
+            <p class="text-sm text-navy-500 mt-4">
+                {{ __('app.last_updated') }}: {{ __('app.terms_last_updated') }}
+            </p>
         </div>
     </section>
 
-    {{-- Content --}}
     <section class="bg-white py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose prose-lg max-w-none">

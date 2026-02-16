@@ -1,13 +1,17 @@
-<footer class="bg-gradient-to-br from-navy-900 via-navy-800 to-trust-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<footer class="bg-navy-950 text-white border-t border-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
             {{-- Company Info --}}
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center mb-4">
-                    <img class="h-8 w-auto" src="{{ asset('images/logo-white.svg') }}" alt="{{ config('app.name') }}">
-                    <span class="ml-2 text-xl font-bold text-white">DevStudio</span>
+                    @if(file_exists(public_path('images/logo-white.svg')))
+                        <img class="h-8 w-auto" src="{{ asset('images/logo-white.svg') }}" alt="{{ config('app.name') }}">
+                    @else
+                        <img class="h-8 w-auto brightness-0 invert" src="{{ asset('images/logo.svg') }}" alt="{{ config('app.name') }}">
+                    @endif
+                    <span class="ml-2 text-xl font-bold text-white">{{ config('app.name') }}</span>
                 </div>
-                <p class="text-trust-200 mb-4">
+                <p class="text-navy-400 mb-4">
                     {{ __('app.footer_description') }}
                 </p>
                 {{-- <div class="flex space-x-4">
@@ -47,32 +51,32 @@
                 <h3 class="text-lg font-semibold mb-4 text-white">{{ __('app.quick_links') }}</h3>
                 <ul class="space-y-2">
                     <li>
-                        <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" 
-                           class="text-trust-200 hover:text-white transition-colors">
+                        <a href="{{ route('home', ['locale' => app()->getLocale()]) }}"
+                           class="text-navy-400 hover:text-white transition-colors">
                             {{ __('app.home') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" 
-                           class="text-trust-200 hover:text-white transition-colors">
+                        <a href="{{ route('about', ['locale' => app()->getLocale()]) }}"
+                           class="text-navy-400 hover:text-white transition-colors">
                             {{ __('app.about') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}" 
-                           class="text-trust-200 hover:text-white transition-colors">
+                        <a href="{{ route('portfolio', ['locale' => app()->getLocale()]) }}"
+                           class="text-navy-400 hover:text-white transition-colors">
                             {{ __('app.portfolio') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('services', ['locale' => app()->getLocale()]) }}" 
-                           class="text-trust-200 hover:text-white transition-colors">
+                        <a href="{{ route('services', ['locale' => app()->getLocale()]) }}"
+                           class="text-navy-400 hover:text-white transition-colors">
                             {{ __('app.services') }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-                           class="text-trust-200 hover:text-white transition-colors">
+                        <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+                           class="text-navy-400 hover:text-white transition-colors">
                             {{ __('app.contact') }}
                         </a>
                     </li>
@@ -82,21 +86,21 @@
             {{-- Contact Info --}}
             <div>
                 <h3 class="text-lg font-semibold mb-4 text-white">{{ __('app.contact_info') }}</h3>
-                <div class="space-y-2">
-                    <p class="text-trust-200 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-trust-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="space-y-3">
+                    <p class="text-navy-400 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-navy-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                         andrey@stetsenko.org
                     </p>
-                    <p class="text-trust-200 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-trust-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <p class="text-navy-400 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-navy-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                         </svg>
                         +380 (67) 100-16-64
                     </p>
-                    <p class="text-trust-200 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-trust-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <p class="text-navy-400 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-navy-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
@@ -107,13 +111,13 @@
         </div>
 
         {{-- Bottom Bar --}}
-        <div class="border-t border-trust-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-trust-300 text-sm">
-                © {{ date('Y') }} YouDev. All rights reserved.
+        <div class="border-t border-navy-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-navy-400 text-sm">
+                © {{ date('Y') }} YouDev. {{ app()->getLocale() === 'uk' ? 'Усі права захищено.' : 'All rights reserved.' }}
             </p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="{{ route('privacy-policy', ['locale' => app()->getLocale()]) }}" class="text-trust-300 hover:text-white text-sm transition-colors">{{ __('app.privacy_policy') }}</a>
-                <a href="{{ route('terms-of-service', ['locale' => app()->getLocale()]) }}" class="text-trust-300 hover:text-white text-sm transition-colors">{{ __('app.terms_of_service') }}</a>
+            <div class="flex space-x-8">
+                <a href="{{ route('privacy-policy', ['locale' => app()->getLocale()]) }}" class="text-navy-400 hover:text-white text-sm transition-colors">{{ __('app.privacy_policy') }}</a>
+                <a href="{{ route('terms-of-service', ['locale' => app()->getLocale()]) }}" class="text-navy-400 hover:text-white text-sm transition-colors">{{ __('app.terms_of_service') }}</a>
             </div>
         </div>
     </div>

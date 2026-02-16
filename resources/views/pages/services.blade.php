@@ -1,20 +1,20 @@
 <x-layouts.app>
-    {{-- Hero Section --}}
-    <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                    {{ __('app.services_title') }}
-                </h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    {{ __('app.services_subtitle') }}
-                </p>
-            </div>
+    {{-- Hero --}}
+    <section class="bg-navy-950 pt-24 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <p class="section-label text-trust-400 mb-4">{{ __('app.services') }}</p>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                {{ __('app.services_title') }}
+            </h1>
+            <p class="text-xl text-navy-300 max-w-2xl mx-auto">
+                {{ __('app.services_subtitle') }}
+            </p>
         </div>
     </section>
 
     {{-- Main Services --}}
-    <section class="bg-white py-20">
+    <section class="bg-white py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
                 {{-- Web Development --}}
@@ -332,7 +332,7 @@
     </section>
 
     {{-- Process Section --}}
-    <section class="bg-gray-50 py-20">
+    <section class="bg-navy-50 py-24 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -353,7 +353,7 @@
 
             <div class="relative">
                 {{-- Timeline line --}}
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 hidden lg:block"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-trust-200 hidden lg:block"></div>
 
                 <div class="space-y-12 lg:space-y-24">
                     {{-- Step 1 --}}
@@ -361,7 +361,7 @@
                         <div class="lg:w-1/2 lg:pr-12">
                             <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">1</div>
+                                    <div class="w-12 h-12 bg-trust-600 rounded-full flex items-center justify-center text-white font-bold text-xl">1</div>
                                     <h3 class="text-xl font-semibold text-gray-900 ml-4">
                                         @if(app()->getLocale() === 'uk')
                                             Консультація та аналіз
@@ -379,18 +379,18 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-600 rounded-full border-4 border-white hidden lg:block"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-trust-600 rounded-full border-4 border-white hidden lg:block"></div>
                         <div class="lg:w-1/2 lg:pl-12 hidden lg:block"></div>
                     </div>
 
                     {{-- Step 2 --}}
                     <div class="relative flex items-center">
                         <div class="lg:w-1/2 lg:pr-12 hidden lg:block"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-600 rounded-full border-4 border-white hidden lg:block"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-trust-600 rounded-full border-4 border-white hidden lg:block"></div>
                         <div class="lg:w-1/2 lg:pl-12">
                             <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
+                                    <div class="w-12 h-12 bg-trust-600 rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
                                     <h3 class="text-xl font-semibold text-gray-900 ml-4">
                                         @if(app()->getLocale() === 'uk')
                                             Планування та дизайн
@@ -415,7 +415,7 @@
                         <div class="lg:w-1/2 lg:pr-12">
                             <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">3</div>
+                                    <div class="w-12 h-12 bg-trust-600 rounded-full flex items-center justify-center text-white font-bold text-xl">3</div>
                                     <h3 class="text-xl font-semibold text-gray-900 ml-4">
                                         @if(app()->getLocale() === 'uk')
                                             Розробка та тестування
@@ -433,18 +433,18 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-600 rounded-full border-4 border-white hidden lg:block"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-trust-600 rounded-full border-4 border-white hidden lg:block"></div>
                         <div class="lg:w-1/2 lg:pl-12 hidden lg:block"></div>
                     </div>
 
                     {{-- Step 4 --}}
                     <div class="relative flex items-center">
                         <div class="lg:w-1/2 lg:pr-12 hidden lg:block"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-orange-600 rounded-full border-4 border-white hidden lg:block"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-trust-600 rounded-full border-4 border-white hidden lg:block"></div>
                         <div class="lg:w-1/2 lg:pl-12">
                             <div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl">4</div>
+                                    <div class="w-12 h-12 bg-trust-600 rounded-full flex items-center justify-center text-white font-bold text-xl">4</div>
                                     <h3 class="text-xl font-semibold text-gray-900 ml-4">
                                         @if(app()->getLocale() === 'uk')
                                             Запуск та підтримка
@@ -468,26 +468,19 @@
         </div>
     </section>
 
-    {{-- CTA Section --}}
-    <section class="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                @if(app()->getLocale() === 'uk')
-                    Готові почати ваш проект?
-                @else
-                    Ready to Start Your Project?
-                @endif
+    {{-- CTA --}}
+    <section class="bg-navy-950 py-24 lg:py-32">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                @if(app()->getLocale() === 'uk') Готові почати ваш проект? @else Ready to Start Your Project? @endif
             </h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                @if(app()->getLocale() === 'uk')
-                    Отримайте безкоштовну консультацію та оцінку вашого проекту від наших експертів
-                @else
-                    Get a free consultation and project estimate from our experts
-                @endif
+            <p class="text-xl text-navy-300 mb-10">
+                @if(app()->getLocale() === 'uk') Отримайте безкоштовну консультацію та оцінку від наших експертів @else Get a free consultation and project estimate from our experts @endif
             </p>
-            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" 
-               class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-lg font-medium transition-colors">
+            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
+               class="inline-flex items-center bg-trust-500 hover:bg-trust-400 text-white px-10 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-trust-500/25">
                 {{ __('app.get_consultation') }}
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
         </div>
     </section>

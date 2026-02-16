@@ -1,35 +1,29 @@
 <x-layouts.app>
-    {{-- Hero Section --}}
-    <section class="bg-gradient-to-br from-purple-900 via-purple-800 to-blue-900 pt-20 pb-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white">
-                <div class="mb-6">
-                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-500/20 text-purple-200 border border-purple-400/30">
-                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                        </svg>
-                        @if(app()->getLocale() === 'uk')
-                            Розробка на замовлення
-                        @else
-                            Custom Development
-                        @endif
-                    </span>
-                </div>
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
-                    @if(app()->getLocale() === 'uk')
-                        Створюємо <span class="text-purple-400">унікальні</span> рішення
-                    @else
-                        Building <span class="text-purple-400">Unique</span> Solutions
-                    @endif
-                </h1>
-                <p class="text-xl text-purple-100 max-w-4xl mx-auto leading-relaxed">
+    <section class="bg-navy-950 pt-24 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-subtle opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="mb-6">
+                <span class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-medium bg-trust-500/20 text-trust-300 border border-trust-400/30">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                    @if(app()->getLocale() === 'uk') Розробка на замовлення @else Custom Development @endif
+                </span>
+            </div>
+            <h1 class="text-5xl lg:text-6xl font-bold text-white mb-6">
+                @if(app()->getLocale() === 'uk')
+                    Створюємо <span class="text-trust-400">унікальні</span> рішення
+                @else
+                    Building <span class="text-trust-400">Unique</span> Solutions
+                @endif
+            </h1>
+            <p class="text-xl text-navy-300 max-w-2xl mx-auto leading-relaxed">
                     @if(app()->getLocale() === 'uk')
                         Повний цикл розробки програмного забезпечення від ідеї до впровадження. Веб-додатки, мобільні програми, корпоративні системи - ми втілюємо ваші ідеї в життя.
                     @else
                         Full-cycle software development from idea to implementation. Web applications, mobile apps, enterprise systems - we bring your ideas to life.
                     @endif
                 </p>
-            </div>
         </div>
     </section>
 
