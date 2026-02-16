@@ -101,7 +101,7 @@ class PortfolioController extends Controller
             'description.uk' => 'required|string',
             'technologies' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'presentation_pdf' => 'nullable|file|mimes:pdf|max:10240',
+            'presentation_pdf' => 'nullable|file|mimes:pdf|max:20480',
             'url' => 'nullable|url',
             'github_url' => 'nullable|url',
             'category' => 'required|in:web,website,ecommerce,design,marketing,other',
