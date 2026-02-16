@@ -13,6 +13,7 @@ class Portfolio extends Model
         'description',
         'technologies',
         'image',
+        'presentation_pdf',
         'gallery',
         'url',
         'github_url',

@@ -106,6 +106,19 @@
                     </div>
                 </div>
 
+                {{-- Presentation PDF --}}
+                <div>
+                    <label for="presentation_pdf" class="block text-sm font-medium text-gray-700 mb-2">
+                        Presentation PDF
+                    </label>
+                    <input type="file" name="presentation_pdf" id="presentation_pdf" accept=".pdf,application/pdf"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent @error('presentation_pdf') border-red-500 @enderror">
+                    @error('presentation_pdf')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    @enderror
+                    <p class="text-gray-500 text-sm mt-1">Max size: 10MB. PDF only.</p>
+                </div>
+
                 {{-- URLs --}}
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>

@@ -114,6 +114,41 @@
         </section>
     @endif
 
+    {{-- Presentation PDF --}}
+    @if($portfolio->presentation_pdf ?? null)
+        <section class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-bold text-gray-900">
+                        @if(app()->getLocale() === 'uk')
+                            Презентація
+                        @else
+                            Presentation
+                        @endif
+                    </h2>
+                    <a href="{{ asset('storage/' . $portfolio->presentation_pdf) }}" target="_blank" rel="noopener"
+                       class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center gap-2">
+                        @if(app()->getLocale() === 'uk')
+                            Відкрити в новій вкладці
+                        @else
+                            Open in new tab
+                        @endif
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden" style="min-height: 600px;">
+                    <iframe src="{{ asset('storage/' . $portfolio->presentation_pdf) }}#toolbar=1&navpanes=1" 
+                            class="w-full border-0"
+                            style="height: 75vh; min-height: 600px;"
+                            title="{{ $portfolio->getLocalizedTitle() }} — PDF">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    @endif
+
     {{-- Project Details --}}
     <section class="bg-gray-50 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
